@@ -1,0 +1,6 @@
+Hello World!
+Welcome to Python!
+amla
+kiwi
+grapes
+pear
