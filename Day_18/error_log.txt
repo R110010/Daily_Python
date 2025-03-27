@@ -1,0 +1,6 @@
+division by zero
+unsupported operand type(s) for /: 'str' and 'int'
+unsupported operand type(s) for /: 'int' and 'str'
+division by zero
+unsupported operand type(s) for /: 'str' and 'int'
+unsupported operand type(s) for /: 'int' and 'str'
