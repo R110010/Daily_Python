@@ -41,6 +41,23 @@ class LinkedList:
                 print("Cycle present in linked list")
                 return True
         return False
+    def remove_cycle(self):
+        slow_p = self.head
+        fast_p = self.head
+        while fast_p and fast_p.next:            
+            slow_p = slow_p.next
+            fast_p = fast_p.next.next
+            if slow_p==fast_p:
+                slow_p = self.head                
+                if slow_p!=fast_p:
+                    while slow_p.next!=fast_p.next:
+                        slow_p=slow_p.next
+                        fast_p=fast_p.next
+                    fast_p.next = None
+                else:
+                    while fast_p.next!=slow_p:
+                        fast_p=fast_p.next
+                    fast_p.next = None
 ll = LinkedList()
 ll.insert_at_end(12)
 ll.insert_at_end(13)

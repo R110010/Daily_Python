@@ -56,13 +56,26 @@ class LinkedList:
             current = next
         self.head = prev
     def reverse_list_recursive(self):
-        def _reverse_list_recursive(current,prev):
+        def _reverse_list_recursive(current,prev=None):
             if current == None:
                 return prev
             next = current.next
             current.next = prev
             return _reverse_list_recursive(next,current)
-        self.head = _reverse_list_recursive(self.head,None)
+        self.head = _reverse_list_recursive(self.head)
+    def length_iterative(self):
+        count = 0
+        current = self.head
+        while current:
+            current = current.next
+            count+=1
+        return count
+    def length_recursive(self):
+        def _length_recursive(node,count=0):
+            if node == None:
+                return count
+            return _length_recursive(node.next,count+1)
+        return _length_recursive(self.head)
 
 
 
@@ -84,3 +97,5 @@ ll.delete_by_value(10)
 ll.print_list()
 ll.reverse_list_iteratively()
 ll.print_list()
+print("length of list iterative =",ll.length_iterative())
+print("length of list recursive =",ll.length_recursive())
