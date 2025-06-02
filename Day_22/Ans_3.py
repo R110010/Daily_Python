@@ -25,8 +25,8 @@ for char in lines:
 print(s)
 rev_s =Stack()
 while s.peek()!=None:
-    poppped = s.pop()
-    rev_s.push(poppped)
+    popped = s.pop()
+    rev_s.push(popped)
 
 reversed = "" .join(rev_s.stack)
 print(reversed)

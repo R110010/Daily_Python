@@ -1,4 +1,4 @@
-# find the seconf largest element in a list
+# find the second largest element in a list
 #lst=[1]
 lst=[2,2,2,2,2,2]
 #lst = [2,4,5,73,56,79,24,90]

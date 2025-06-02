@@ -43,6 +43,7 @@ class LinkedList:
         current =self.head
         if current.data == value:
             current=current.next
+            return
         while current.next and current.next.data != value:
             current = current.next
         current.next = current.next.next

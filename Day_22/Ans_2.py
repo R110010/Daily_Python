@@ -29,5 +29,5 @@ def check_bal(expression):
                 last = stack.pop()
                 if match[exp]!=last:
                     return False
-    return True
-print(check_bal("(({{[[]]}}"))
+    return True if stack.is_empty() else False
+print(check_bal("{(())}"))

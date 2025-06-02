@@ -25,7 +25,7 @@ def check_balanced_paranthesis(expression):
                 popped = stack.pop()
                 if match[exp]!=popped:
                     return False
-        return True
+    return stack.is_empty()
     
-res = check_balanced_paranthesis("{()}")
+res = check_balanced_paranthesis("{}")
 print(res)
